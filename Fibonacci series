@@ -1,0 +1,17 @@
+def fibonacci_series (n):
+    if n <= 1:
+        return n
+    # Compute using the recursive formula
+    else:
+        return (fibonacci_series(n-1) + fibonacci_series(n-2))
+
+# Enter input from user
+no_of_terms = int(input("Enter number of terms:"))
+
+# Check if input is invalid
+if no_of_terms <= 0:
+    print("Please enter a positive number")
+else:
+    print("Fibonacci sequence:")
+    for i in range(no_of_terms):
+        print(fibonacci_series(i))
